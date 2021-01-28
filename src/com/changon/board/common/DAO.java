@@ -1,0 +1,25 @@
+package com.changon.board.common;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class DAO { // 상위 DAO
+	private String driver = "oracle.jdbc.driver.OracleDriver";
+	private String url = "jdbc:oracle:thin:@localhost:1521:xe";
+	private String user = "changon";
+	private String password ="1234";
+	
+	// public만 상속 가능
+	
+	public Connection conn;
+	
+	public DAO() {
+		try {
+			Class.forName(driver);
+			conn = DriverManager.getConnection(url, user, password);
+		}catch(ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}
+	}
+}
