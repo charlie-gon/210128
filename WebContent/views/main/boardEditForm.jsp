@@ -20,7 +20,6 @@
 			<form id="frm" name="frm" method="post">
 				<input type="hidden" id="bId" name="bId" value="${vo.bId }">
 
-
 				<table border="1">
 					<tr>
 						<th width="100">작성자</th>
@@ -47,8 +46,7 @@
 					&nbsp;&nbsp;
 					<button type="reset">취소</button>
 					&nbsp;&nbsp;
-					<button type="button"
-						onclick="location.href='/210128/boardList.do'">목록으로 이동</button>
+					<button type="button" onclick="location.href='/210128/boardList.do'">목록으로 이동</button>
 				</div>
 			</form>
 		</div>
